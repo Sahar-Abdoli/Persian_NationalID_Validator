@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.checkIdButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.nationalIdTextbox = new System.Windows.Forms.TextBox();
             this.Message = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // checkIdButton
             // 
-            this.button1.Location = new System.Drawing.Point(15, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "&Check ID";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.checkIdButton.Location = new System.Drawing.Point(15, 127);
+            this.checkIdButton.Name = "checkIdButton";
+            this.checkIdButton.Size = new System.Drawing.Size(75, 23);
+            this.checkIdButton.TabIndex = 3;
+            this.checkIdButton.Text = "&Check ID";
+            this.checkIdButton.UseVisualStyleBackColor = true;
+            this.checkIdButton.Click += new System.EventHandler(this.checkIdButton_Click);
             // 
             // label1
             // 
@@ -73,25 +73,26 @@
             this.Message.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.Message.Click += new System.EventHandler(this.label2_Click);
             // 
-            // button2
+            // resetButton
             // 
-            this.button2.Location = new System.Drawing.Point(178, 127);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "&Reset";
-            this.button2.UseVisualStyleBackColor = true;
+            this.resetButton.Location = new System.Drawing.Point(178, 127);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 4;
+            this.resetButton.Text = "&Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(275, 162);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.Message);
             this.Controls.Add(this.nationalIdTextbox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkIdButton);
             this.Name = "Form";
             this.Text = "Persian NationalID Validator";
             this.ResumeLayout(false);
@@ -101,11 +102,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button checkIdButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nationalIdTextbox;
         private System.Windows.Forms.Label Message;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button resetButton;
     }
 }
 

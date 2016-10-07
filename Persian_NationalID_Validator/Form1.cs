@@ -22,9 +22,14 @@ namespace Persian_NationalID_Validator
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void checkIdButton_Click(object sender, EventArgs e)
         {
-            Message.Text = "کد ملی معتبر نیست";
+            
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            nationalIdTextbox.Text = string.Empty;
         }
     }
 }
