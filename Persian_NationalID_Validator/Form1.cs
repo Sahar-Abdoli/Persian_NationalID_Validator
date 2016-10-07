@@ -71,11 +71,11 @@ namespace Persian_NationalID_Validator
 
             if (intControlValue==intCorrectControlValue)
             {
-                messageLable.Text = "کد ملی صحیح است";
+                messageLable.Text = "Correct Information!";
             }
             else
             {
-                messageLable.Text = "کد ملی صحیح نیست";
+                messageLable.Text = "Incorrect Information!";
             }
 
         }
