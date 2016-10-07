@@ -31,7 +31,7 @@
             this.checkIdButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.nationalIdTextbox = new System.Windows.Forms.TextBox();
-            this.Message = new System.Windows.Forms.Label();
+            this.messageLable = new System.Windows.Forms.Label();
             this.resetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -61,17 +61,17 @@
             this.nationalIdTextbox.Size = new System.Drawing.Size(175, 20);
             this.nationalIdTextbox.TabIndex = 1;
             // 
-            // Message
+            // messageLable
             // 
-            this.Message.AutoSize = true;
-            this.Message.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Message.Location = new System.Drawing.Point(247, 72);
-            this.Message.Name = "Message";
-            this.Message.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Message.Size = new System.Drawing.Size(0, 18);
-            this.Message.TabIndex = 2;
-            this.Message.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.Message.Click += new System.EventHandler(this.label2_Click);
+            this.messageLable.AutoSize = true;
+            this.messageLable.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageLable.Location = new System.Drawing.Point(128, 76);
+            this.messageLable.Name = "messageLable";
+            this.messageLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.messageLable.Size = new System.Drawing.Size(0, 18);
+            this.messageLable.TabIndex = 2;
+            this.messageLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.messageLable.Click += new System.EventHandler(this.label2_Click);
             // 
             // resetButton
             // 
@@ -89,7 +89,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(275, 162);
             this.Controls.Add(this.resetButton);
-            this.Controls.Add(this.Message);
+            this.Controls.Add(this.messageLable);
             this.Controls.Add(this.nationalIdTextbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkIdButton);
@@ -105,7 +105,7 @@
         private System.Windows.Forms.Button checkIdButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nationalIdTextbox;
-        private System.Windows.Forms.Label Message;
+        private System.Windows.Forms.Label messageLable;
         private System.Windows.Forms.Button resetButton;
     }
 }
