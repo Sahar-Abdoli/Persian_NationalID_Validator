@@ -26,65 +26,79 @@ namespace Persian_NationalID_Validator
         private void checkIdButton_Click(object sender, EventArgs e)
         {
 
+            if ((nationalIdTextbox.Text.Length <= 10) && (nationalIdTextbox.Text.Length >= 8))
+            {            
+                //Change to Standart Format for Small String Between 8 and 9
+                //***********************************************************************************
+                    string strNationalId = nationalIdTextbox.Text;
 
-            //Change to Standart Format for Small String Between 8 and 9
-            //***********************************************************************************
-            string strNationalId = nationalIdTextbox.Text;
-
-            if (strNationalId.Length == 8)
-            {
-                strNationalId = "00" + strNationalId;
-            }
-            else if (strNationalId.Length == 9)
-            {
-                strNationalId = "0" + strNationalId;
-            }
-
-
-            //Parse Text To Array And Convert it To int
-            //***********************************************************************************
-            string[] stringNationalIdArray = strNationalId.Select(c => c.ToString()).ToArray();
-            int[] intNationalIdArray = Array.ConvertAll(stringNationalIdArray, s => int.Parse(s));
+                if (strNationalId.Length == 8)
+                {
+                    strNationalId = "00" + strNationalId;
+                }
+                else if (strNationalId.Length == 9)
+                {
+                    strNationalId = "0" + strNationalId;
+                }
 
 
-            //Validation Formula
-            //***********************************************************************************
-            int intSum = 0;
-            for (int index = 8; index >= 0; index--)
-            {
-                int i = 10 - index;
-                intNationalIdArray[index] = intNationalIdArray[index] * i;
-                intSum = intSum + intNationalIdArray[index];
-            }
-            int intControlValue = 0;
-            intControlValue = intNationalIdArray[9];
-            int intMod = intSum % 11;
-            int intCorrectControlValue = 0;
-            if (intMod <= 2)
-            {
-                intCorrectControlValue = intMod;
-            }
-            else if (intMod > 2)
-            {
-                intCorrectControlValue = 11 - intMod;
-            }
+                //Parse Text To Array And Convert it To int
+                //***********************************************************************************
+                string[] stringNationalIdArray = strNationalId.Select(c => c.ToString()).ToArray();
+                int[] intNationalIdArray = Array.ConvertAll(stringNationalIdArray, s => int.Parse(s));
 
-            if (intControlValue==intCorrectControlValue)
-            {
-                messageLable.Text = "Correct Information!";
+
+                //Validation Formula
+                //***********************************************************************************
+                int intSum = 0;
+                for (int index = 8; index >= 0; index--)
+                {
+                    int i = 10 - index;
+                    intNationalIdArray[index] = intNationalIdArray[index] * i;
+                    intSum = intSum + intNationalIdArray[index];
+                }
+                int intControlValue = 0;
+                intControlValue = intNationalIdArray[9];
+                int intMod = intSum % 11;
+                int intCorrectControlValue = 0;
+                if (intMod <= 2)
+                {
+                    intCorrectControlValue = intMod;
+                }
+                else if (intMod > 2)
+                {
+                    intCorrectControlValue = 11 - intMod;
+                }
+
+                if (intControlValue == intCorrectControlValue)
+                {
+                    messageLable.Text = "Correct Information!";
+                }
+                else
+                {
+                    messageLable.Text = "Incorrect Information!";
+                }
+
             }
             else
             {
-                messageLable.Text = "Incorrect Information!";
+                messageLable.Text = "Count of Textbox must be between 8 to 10 char";
             }
-
         }
-
         //***********************************************************************************
         private void resetButton_Click(object sender, EventArgs e)
         {
             nationalIdTextbox.Text = string.Empty;
 
         }
+
+        private void nationalIdTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((((e.KeyChar >= '0') && (e.KeyChar <= '9')) || (e.KeyChar == 8)) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

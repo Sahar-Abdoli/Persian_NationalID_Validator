@@ -60,17 +60,19 @@
             this.nationalIdTextbox.Name = "nationalIdTextbox";
             this.nationalIdTextbox.Size = new System.Drawing.Size(175, 20);
             this.nationalIdTextbox.TabIndex = 1;
+            this.nationalIdTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nationalIdTextbox_KeyPress);
             // 
             // messageLable
             // 
             this.messageLable.AutoSize = true;
-            this.messageLable.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.messageLable.Location = new System.Drawing.Point(128, 76);
+            this.messageLable.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageLable.Location = new System.Drawing.Point(18, 63);
+            this.messageLable.MaximumSize = new System.Drawing.Size(250, 50);
             this.messageLable.Name = "messageLable";
-            this.messageLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.messageLable.Size = new System.Drawing.Size(0, 18);
+            this.messageLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.messageLable.Size = new System.Drawing.Size(0, 16);
             this.messageLable.TabIndex = 2;
-            this.messageLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.messageLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.messageLable.Click += new System.EventHandler(this.label2_Click);
             // 
             // resetButton
@@ -94,6 +96,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkIdButton);
             this.Name = "Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Persian NationalID Validator";
             this.ResumeLayout(false);
             this.PerformLayout();
