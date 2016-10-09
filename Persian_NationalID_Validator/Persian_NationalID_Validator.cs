@@ -82,7 +82,7 @@ namespace Persian_NationalID_Validator
             }
             else
             {
-                messageLable.Text = "Count of Textbox must be between 8 to 10 char";
+                messageLable.Text = "Textbox length must be between 8 to 10 character";
             }
         }
         //***********************************************************************************
