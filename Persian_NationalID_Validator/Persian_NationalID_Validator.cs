@@ -72,11 +72,11 @@ namespace Persian_NationalID_Validator
 
                 if (intControlValue == intCorrectControlValue)
                 {
-                    messageLable.Text = "Correct Information!";
+                    messageLable.Text = "Valid Information!";
                 }
                 else
                 {
-                    messageLable.Text = "Incorrect Information!";
+                    messageLable.Text = "Invalid Information!";
                 }
 
             }
